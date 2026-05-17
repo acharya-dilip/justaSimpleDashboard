@@ -27,9 +27,7 @@ Route::get("/meeting",function() {
     return view('meeting');
 })->middleware(['auth', 'verified'])->name('meeting');
 
-Route::get("/about",function() {
-    return view('about');
-})->name('about');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
