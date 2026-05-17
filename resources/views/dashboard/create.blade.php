@@ -7,7 +7,7 @@
     </x-slot>
 
 
-<x-container class="m-10">
+<x-container class="m-10" style="max-width: 65%;">
 
     <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
         {{ __('Description:') }}

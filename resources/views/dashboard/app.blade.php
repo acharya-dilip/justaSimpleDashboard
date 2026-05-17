@@ -13,21 +13,21 @@
    </x-slot>
 
     @foreach($posts as $post)
-        <x-container class="my-10">
+        <div class="flex justify-center">
+            <x-container class="my-10 max-w-5xl">
 
                 <div class="flex left-0 text-3xl">
                     {{$post->description}}
                 </div>
-            <br>
-            @if($post->image_path)
+                <br>
+                @if($post->image_path)
 
-                <img alt='justanimage' src="{{asset('storage/'.$post->image_path)}}"
-                     class="rounded w-auto h-auto">
+                    <img alt='justanimage' src="{{asset('storage/'.$post->image_path)}}"
+                         class="rounded flex justify-center max-w-5xl">
             @endif
-
-
-
         </x-container>
+        </div>
+
     @endforeach
 
 </x-app-layout>
