@@ -7,7 +7,35 @@
     </x-slot>
 
 
+<x-container>
 
+    <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
+        {{ __('Description:') }}
+
+    </h1>
+    <form>
+
+        <x-text-area class="w-full"></x-text-area>
+
+
+        <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
+            {{ __('Images:') }}
+
+        </h1>
+        <br>
+        <input type="file" accept="image/*" id="images" multiple>
+        <br>
+        <br>
+        <div class="flex justify-end">
+            <x-primary-button>
+                {{ __('Submit') }}
+            </x-primary-button>
+        </div>
+
+
+    </form>
+
+</x-container>
 
 
 
