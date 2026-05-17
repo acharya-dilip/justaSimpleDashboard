@@ -14,16 +14,18 @@
 
     @foreach($posts as $post)
         <div class="flex justify-center">
-            <x-container class="my-10 max-w-5xl">
+            <x-container class="my-10 max-w-4xl max-h-4xl">
 
-                <div class="flex left-0 text-3xl">
+                <div class="flex left-0 text-3xl ">
                     {{$post->description}}
                 </div>
                 <br>
                 @if($post->image_path)
 
-                    <img alt='justanimage' src="{{asset('storage/'.$post->image_path)}}"
-                         class="rounded flex justify-center max-w-5xl">
+                    <div class="flex justify-center mb-10">
+                        <img alt='justanimage' src="{{asset('storage/'.$post->image_path)}}"
+                            class="rounded w-auto max-h-9xl">
+                    </div>
             @endif
         </x-container>
         </div>
