@@ -20,9 +20,8 @@ class postController extends Controller
         $post->description = $validate['description'];
 
         if($request->hasFile('image')){
-               $filename =  time() .'.'. $request->file('image')->getClientOriginalExtension();
-               $request->file('image')->storeAs('public/uploads', $filename);
-                $post->image_path = $filename;
+
+            $post->image_path = $request->file('image')->store('uploads', 'public');
 
         }
 
