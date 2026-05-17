@@ -37,7 +37,7 @@ class postController extends Controller
 
         $posts = Post::latest()->get();
 
-        return view('dashboard.app, compact('posts'));
+        return view('dashboard.app', compact('posts'));
     }
 
 
