@@ -4,10 +4,11 @@
         {{ __('Dashboard') }}
 
     </h1>
-
-       <x-primary-button href="">
-           <h2>Create Post</h2>
-       </x-primary-button>
+    <form method="get" action="{{ route('dashboard.create') }}">
+        <x-primary-button>
+            <h2>Create Post</h2>
+        </x-primary-button>
+    </form>
 
    </x-slot>
 

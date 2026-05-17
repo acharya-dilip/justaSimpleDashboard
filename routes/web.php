@@ -17,6 +17,13 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.app');
 })->middleware(['auth', 'verified'])->name('dashboard');
+Route::prefix('dashboard')->group(function () {
+
+    Route::get('/create',function(){
+        return view('dashboard.create');
+    })->name('dashboard.create');
+
+});
 
 
 Route::get("/members",function() {
