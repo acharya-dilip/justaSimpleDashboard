@@ -23,7 +23,7 @@
 
         </h1>
         <br>
-        <input type="file" accept="image/*" id="images" multiple>
+        <input type="file" accept="image/*" id="images">
         <br>
         <br>
         <div class="flex justify-end">
