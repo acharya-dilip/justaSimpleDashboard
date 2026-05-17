@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/registration', function () {
+    return view('auth.register');
+});
+
 Route::get('/dashboard', [postController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::prefix('dashboard')->group(function () {
 
