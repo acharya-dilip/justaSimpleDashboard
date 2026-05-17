@@ -27,6 +27,10 @@ Route::get("/meeting",function() {
     return view('meeting');
 })->middleware(['auth', 'verified'])->name('meeting');
 
+Route::get("/admin",function() {
+    return view('admin');
+})->middleware(['auth', 'verified'])->name('admin');
+
 
 
 Route::middleware('auth')->group(function () {

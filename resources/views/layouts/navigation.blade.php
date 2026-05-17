@@ -21,6 +21,9 @@
                     <x-nav-link :href="route('meeting')" :active:="request()->routeIs('meeting')">
                         Meeting
                     </x-nav-link>
+                    <x-nav-link :href="route('admin')" :active:="request()->routeIs('admin')" >
+                        Admin Pannel
+                    </x-nav-link>
 
                 </div>
             </div>
@@ -85,7 +88,9 @@
             <x-responsive-nav-link :href="route('meeting')" :active="request()->routeIs('meeting')">
                 Meeting
             </x-responsive-nav-link>
-
+            <x-responsive-nav-link :href="route('admin')" :active="request()->routeIs('admin')">
+                Meeting
+            </x-responsive-nav-link>
         </div>
 
 

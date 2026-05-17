@@ -2,8 +2,16 @@
    <x-slot name="header">
     <h1 class="font-semibold text-7xl text-gray-800 dark:text-gray-200 leading-tight">
         {{ __('Dashboard') }}
+
     </h1>
+
+       <x-primary-button href="">
+           <h2>Create Post</h2>
+       </x-primary-button>
+
    </x-slot>
+
+
 
 
 </x-app-layout>
