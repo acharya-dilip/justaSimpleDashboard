@@ -21,9 +21,8 @@
             <br>
             @if($post->image_path)
 
-                <img alt='justanimage' src="{{asset('storage/app/private/public/uploads/'.$post->image_path)}}"
-                     class="rounded w-full h-auto">
-
+                <img alt='justanimage' src="{{asset('storage/'.$post->image_path)}}"
+                     class="rounded w-auto h-auto">
             @endif
 
 
