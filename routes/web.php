@@ -16,6 +16,10 @@ Route::get("/members",function() {
     return view('members');
 })->middleware(['auth', 'verified'])->name('members');
 
+Route::get("/meeting",function() {
+    return view('meeting');
+})->middleware(['auth', 'verified'])->name('meeting');
+
 
 
 Route::middleware('auth')->group(function () {
