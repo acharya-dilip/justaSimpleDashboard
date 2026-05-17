@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/registration', function () {
-    return view('auth.register');
+    return view('register');
 });
 
 Route::get('/dashboard', [postController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
@@ -29,9 +29,8 @@ Route::prefix('dashboard')->group(function () {
 });
 
 
-Route::get("/members",function() {
-    return view('members.app');
-})->middleware(['auth', 'verified'])->name('members');
+Route::get("/members",[\App\Http\Controllers\members\membersController::class,'index'
+])->middleware(['auth', 'verified'])->name('members.index');
 
 Route::get("/meeting",function() {
     return view('meeting');

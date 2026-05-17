@@ -6,4 +6,12 @@
     </x-slot>
 
 
+@foreach($users as $user)
+    <x-container>
+        <h1> {{$user->name}}</h1>
+        <h2>{{$user->role}}</h2>
+        <h2> {{$user->email}}</h2>
+    </x-container>
+
+@endforeach
 </x-app-layout>
