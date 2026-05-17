@@ -12,7 +12,23 @@
 
    </x-slot>
 
+    @foreach($posts as $post)
+        <x-container class="my-10">
+
+            <x-container class="m-10 bg-gray-800">
+                <div class="text-xl">
+                    {{$post->description}}
+                </div>
+                @if($post->image_path)
+
+                    <img alt='justanimage' src="{{asset('storage/uploads/'.$post->image_path)}}"
+                    class="rounded w-full h-auto">
+
+                @endif
+            </x-container>
 
 
+        </x-container>
+    @endforeach
 
 </x-app-layout>
