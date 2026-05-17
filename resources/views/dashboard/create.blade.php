@@ -13,9 +13,10 @@
         {{ __('Description:') }}
 
     </h1>
-    <form method="get" action="{{route('dashboard.create.post')}}">
 
-        <x-text-area class="w-full"></x-text-area>
+    <form enctype="multipart/form-data" method="post" action="{{route('dashboard.create.post')}}">
+        @csrf
+        <x-text-area class="w-full" name="description"></x-text-area>
 
 
         <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
@@ -23,7 +24,7 @@
 
         </h1>
         <br>
-        <input type="file" accept="image/*" id="images">
+        <input type="file" accept="image/*" id="image" name="image">
         <br>
         <br>
         <div class="flex justify-end">

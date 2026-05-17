@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard.app');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [postController::class'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::prefix('dashboard')->group(function () {
 
     Route::get('/create',function(){

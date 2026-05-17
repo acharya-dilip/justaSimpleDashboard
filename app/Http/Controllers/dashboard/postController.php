@@ -4,6 +4,7 @@ namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Post;
+use Illuminate\Http\Request;
 
 class postController extends Controller
 {
@@ -14,19 +15,31 @@ class postController extends Controller
             'description' => 'required',
         ]);
 
+        $post = new post;
+
+        $post->description = $validate['description'];
+
         if($request->hasFile('image')){
                $filename =  time() .'.'. $request->file('image')->getClientOriginalExtension();
                $request->file('image')->storeAs('public/uploads', $filename);
+                $post->image_path = $filename;
+
         }
 
-        $post = new post;
+        $post->save(); //dont forget this is actually performs the operation
 
-        $post['description']->storeAs($validate['description']);
-        $post['image_path']->storeAs($filename);
 
         return redirect(route('dashboard'));
 
     }
+
+    public function index(){
+
+        $posts = Post::latest()->get();
+
+        return view('dashboard.app, compact('posts'));
+    }
+
 
 
 }
