@@ -13,7 +13,7 @@
         {{ __('Description:') }}
 
     </h1>
-    <form method="get" action="{{route()}}">
+    <form method="get" action="{{route('dashboard.create.post')}}">
 
         <x-text-area class="w-full"></x-text-area>
 

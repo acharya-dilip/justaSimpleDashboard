@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\dashboard\postController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +23,7 @@ Route::prefix('dashboard')->group(function () {
     Route::get('/create',function(){
         return view('dashboard.create');
     })->name('dashboard.create');
-
+    Route::post('/create',[postController::class,'create'])->name('dashboard.create.post');
 });
 
 
