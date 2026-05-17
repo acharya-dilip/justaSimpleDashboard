@@ -6,4 +6,11 @@
     </x-slot>
 
 
+    <x-container class="my-10" style="max-width: 65%">
+
+
+
+    </x-container>
+
+
 </x-app-layout>
