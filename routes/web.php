@@ -43,7 +43,7 @@ Route::get("/members",[membersController::class,'index'
 ])->middleware(['auth', 'verified'])->name('members.index');
 
 Route::get("/meeting",function() {
-    return view('meeting');
+    return view('meeting.app');
 })->middleware(['auth', 'verified'])->name('meeting');
 
 
