@@ -119,6 +119,12 @@
 
                         </td>
 
+                    <td>
+
+                        <input type="submit" class="size-32 text-3xl ml-4 bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" value="Update">
+
+                    </td>
+
                 </table>
                 </form>
              </x-container>
