@@ -6,19 +6,35 @@
     </x-slot>
 
 
-@foreach($members as $member)
-    @if($member->role!=NULL)
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
+
+    @foreach($members as $member)
+        @if($member->role!=NULL)
             <x-container class="mt-10">
-                <h1> {{$member->name}}</h1>
-                <h2>{{$member->role}}</h2>
-                <h2> {{$member->email}}</h2>
-                <img alt='justanimage' src="{{asset('storage/'.$member->image_path)}}"
-                     class="rounded w-auto max-h-9xl">
-                <h2>{{$member->techStack}}</h2>
-                <h2>{{$member->number}}</h2>
-                <h2>{{$member->dob}}</h2>
+                <div class="text-xl">
+
+                    <h1> {{$member->name}}</h1>
+                    <h2>{{$member->role}}</h2>
+                    <h2> {{$member->email}}</h2>
+
+                    <div class="size-40 mb-20">
+                        <img alt='justanimage' src="{{asset('storage/'.$member->image)}}"
+                             class="rounded w-auto max-h-9xl">
+                    </div>
+
+                    <h2>{{$member->techStack}}</h2>
+                    <h2>{{$member->number}}</h2>
+                    <h2>{{$member->dob}}</h2>
+
+                </div>
+
             </x-container>
 
         @endif
-@endforeach
+    @endforeach
+
+
+</div>
+
+
 </x-app-layout>
