@@ -53,6 +53,35 @@
                         </td>
                         <td>
 
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="role" class="ml-4">Role:</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48 " id="role" name="role"
+                                                      value="{{$member->role}}"></x-text-input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="number" class="ml-4">Number:</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48" id="number" name="number"
+                                                      value="{{$member->number}}"></x-text-input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="dob" class="ml-4">DOB:</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48" id="dob" name="dob"
+                                                      value="{{$member->dob}}"></x-text-input>
+                                    </td>
+                                </tr>
+                            </table>
 
                         </td>
                 </table>
