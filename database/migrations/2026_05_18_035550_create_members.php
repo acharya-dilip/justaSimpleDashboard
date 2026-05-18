@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->integer('number');
+            $table->string('dob');
             $table->string('tech stack');
             $table->string('role')->nullable();
 
