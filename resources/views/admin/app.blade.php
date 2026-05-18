@@ -7,6 +7,8 @@
 
 
     <x-container class="my-10" style="max-width: 65%">
+        <h1 class="text-3xl font-bold">Member Enrollment</h1>
+
 
 
 

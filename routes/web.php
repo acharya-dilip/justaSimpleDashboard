@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\adminController;
 use App\Http\Controllers\dashboard\postController;
 use App\Http\Controllers\members\membersController;
 use App\Http\Controllers\ProfileController;
@@ -45,9 +46,10 @@ Route::get("/meeting",function() {
     return view('meeting');
 })->middleware(['auth', 'verified'])->name('meeting');
 
-Route::get("/admin",function() {
-    return view('admin');
-})->middleware(['auth', 'verified'])->name('admin');
+
+
+Route::get("/admin",[adminController::class,'index'
+])->middleware(['auth', 'verified'])->name('admin.index');
 
 
 
