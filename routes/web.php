@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/register',function(){
-    return ('<h1>Please Contact the Club Leaders To Register</h1>>');
+    return view('auth.register');
 });
 
 
