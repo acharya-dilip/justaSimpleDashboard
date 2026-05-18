@@ -15,8 +15,10 @@ return new class extends Migration
             $table->id();
 
             $table->string('agenda');
-            $table->string('context');
+            $table->string('time');
             $table->string('location');
+            $table->string('context');
+            $table->string('locationLink');
 
             $table->timestamps();
         });
