@@ -45,7 +45,8 @@ Route::get("/members",[membersController::class,'index'
 Route::get("/meeting",function() {
     return view('meeting.app');
 })->middleware(['auth', 'verified'])->name('meeting');
-Route::get('/meeting/create',[postController::class,'create'
+
+Route::get('/meeting/create',[meetingController::class,'create'
 ])->middleware(['auth', 'role:admin'])->name('meeting.create');
 
 Route::get("/admin",[adminController::class,'index'
