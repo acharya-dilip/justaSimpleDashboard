@@ -39,6 +39,24 @@
 
             </div>
 
+            <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
+                {{ __('Context:') }}
+            </h1>
+            <x-text-area class="w-full" name="context"></x-text-area>
+
+            <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
+                {{ __('Location iframe Link:') }}
+            </h1>
+            <x-text-area class="w-full" name="locationLink"></x-text-area>
+
+            <div class=" flex justify-end">
+                <x-primary-button class="mt-4 h-10">
+                    {{ __('Submit') }}
+                </x-primary-button>
+            </div>
+
+
+
 
 
 

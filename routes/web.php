@@ -49,19 +49,19 @@ Route::get("/meeting",function() {
 
 Route::get('/meeting/create',function(){
         return view('meeting.create');
-})->middleware(['auth', 'role:admin'])->name('meeting.create');
+})->middleware(['auth', 'role:Leader'])->name('meeting.create');
 
 Route::post('/meeting/create',[meetingController::class,'store'
-])->middleware(['auth', 'role:admin'])->name('meeting.store');
+])->middleware(['auth', 'role:Leader'])->name('meeting.store');
 
 Route::get("/admin",[adminController::class,'index'
-])->middleware(['auth', 'role:admin'])->name('admin.index');
+])->middleware(['auth', 'role:Leader'])->name('admin.index');
 
 Route::post("/admin/update",[adminController::class,'update'
-])->middleware(['auth', 'role:admin'])->name('admin.update');
+])->middleware(['auth', 'role:Leader'])->name('admin.update');
 
 Route::delete("/admin/delete/{id}",[adminController::class,'destroy'
-])->middleware(['auth', 'role:admin'])->name('admin.delete');
+])->middleware(['auth', 'role:Leader'])->name('admin.delete');
 
 
 Route::middleware('auth')->group(function () {
