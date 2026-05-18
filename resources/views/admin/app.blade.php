@@ -12,6 +12,13 @@
 
     @foreach($members as $member)
             <x-container class="bg-gray-600 mt-4">
+
+                <form class="flex justify-end" method="post" action="{{route('admin.delete',$member->id)}}">
+                    @csrf
+                    @method('DELETE')
+                    <input type="submit" value="❌️">
+                </form>
+
                 <form method="post" action="{{route('admin.update')}}">
                     @csrf
                 <table>
@@ -128,6 +135,7 @@
 
                 </table>
                 </form>
+
              </x-container>
         @endforeach
 
