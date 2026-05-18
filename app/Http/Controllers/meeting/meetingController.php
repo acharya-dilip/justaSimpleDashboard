@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class meetingController extends Controller
 {
-        function create(Request $request){
+        function store(Request $request){
 
             $validate = request()->validate([
                 'agenda' => 'required',

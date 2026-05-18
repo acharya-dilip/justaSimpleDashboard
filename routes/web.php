@@ -51,6 +51,9 @@ Route::get('/meeting/create',function(){
         return view('meeting.create');
 })->middleware(['auth', 'role:admin'])->name('meeting.create');
 
+Route::post('/meeting/create',[meetingController::class,'store'
+])->middleware(['auth', 'role:admin'])->name('meeting.store');
+
 Route::get("/admin",[adminController::class,'index'
 ])->middleware(['auth', 'role:admin'])->name('admin.index');
 
