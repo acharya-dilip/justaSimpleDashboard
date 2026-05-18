@@ -18,7 +18,7 @@ Route::get('/', function () {
 
 Route::get('/registration', function () {
     return view('register');
-});
+})->name('registration.index');
 
 Route::post('/registration',[membersController::class,'store'
 ])->name('registration.store');
