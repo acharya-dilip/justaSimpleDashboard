@@ -12,7 +12,7 @@
 
     @foreach($members as $member)
             <x-container class="bg-gray-600 mt-4">
-                <form method="post" action="{{route('admin.update'),['id'=>$member->id]}}">
+                <form method="post" action="{{route('admin.update')}}">
                     @csrf
                 <table>
                     <tr>
@@ -94,7 +94,7 @@
                                     </td>
                                     <td>
                                         <x-text-input class="h-9 w-48 " id="id" name="id"
-                                                      value="{{$member->id}}"></x-text-input>
+                                                      value="{{$member->id}}" readonly></x-text-input>
                                     </td>
                                 </tr>
                                 <tr>
@@ -112,7 +112,7 @@
                                     </td>
                                     <td>
                                         <x-text-input class="h-9 w-48" id="created_at" name="created_at"
-                                                      value="{{$member->created_at}}"></x-text-input>
+                                                      value="{{$member->created_at}}" readonly></x-text-input>
                                     </td>
                                 </tr>
                             </table>
