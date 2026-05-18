@@ -9,55 +9,56 @@
     <x-container class="my-10" style="max-width: 65%">
         <h1 class="text-3xl font-bold">Member Enrollment</h1>
 
-        <div class=" md:my-5 max-sm:overflow-x-auto">
-            <table class="table-auto w-[100%]">
-                <thead class="font-roboto text-slate-500 font-medium leading-normal">
-                <tr class="border rounded-md">
-                    <th class="border py-2 px-2 w-[10%]">Image</th>
-                    <th class="border py-2 px-2">ID</th>
-                    <th class="border py-2 px-2">Name</th>
-                    <th class="border py-2 px-2">Email</th>
-                    <th class="border py-2 px-2">Password</th>
-                    <th class="border py-2 px-2">Number</th>
-                    <th class="border py-2 px-2 w-[10%]">Tech Stack</th>
-                    <th class="border py-2 px-2 w-[10%]">Role</th>
-                    <th class="border py-2 px-2 w-[10%]">DOB</th>
-                    <th class="border py-2 px-2 w-[10%]">Created At</th>
-                    <th class="border py-2 px-2 w-[10%]">Edit</th>
-                    <th class="border py-2 px-2 w-[10%]">Delete</th>
 
-                </tr>
-                </thead>
-                <tbody class="font-roboto text-slate-500 font-medium leading-normal">
-
-                @foreach ($members as $member)
-                    <tr class="border rounded-md text-center">
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-                        <td class="border py-4 px-2"></td>
-
-
-
-                        <td class="border py-4 text-center px-2">
-                                    {{--For Editing--}}
+    @foreach($members as $member)
+            <x-container class="bg-gray-600 mt-4">
+                <form>
+                <table>
+                    <tr>
+                        <td>
+                            <img alt='justanimage' src="{{asset('storage/'.$member->image)}}"
+                                 class="rounded-full w-32 h-32">
+                            <x-text-input class="mt-2 h-8 w-32" value="{{$member->image}}" name="image"></x-text-input>
                         </td>
-
-                        <td class="border py-4 text-center px-2">
-                                    {{--For Deleting--}}
+                        <td class="align-middle">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <label for="name" class="ml-4">Name:</label>
+                                        </td>
+                                        <td>
+                                            <x-text-input class="h-9 w-48 " id="name" name="name"
+                                                          value="{{$member->name}}"></x-text-input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="email" class="ml-4">Mail:</label>
+                                        </td>
+                                        <td>
+                                            <x-text-input class="h-9 w-48" id="email" name="email"
+                                                          value="{{$member->email}}"></x-text-input>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <label for="password" class="ml-4">Password:</label>
+                                        </td>
+                                        <td>
+                                            <x-text-input class="h-9 w-48" id="password" name="password"
+                                                          value="{{$member->password}}"></x-text-input>
+                                        </td>
+                                    </tr>
+                                </table>
                         </td>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
-        </div>
+                        <td>
 
+
+                        </td>
+                </table>
+                </form>
+             </x-container>
+        @endforeach
 
     </x-container>
 
