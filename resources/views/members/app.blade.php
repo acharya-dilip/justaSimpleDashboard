@@ -6,27 +6,25 @@
     </x-slot>
 
 
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2">
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md:grid-cols-4 gap-4">
 
     @foreach($members as $member)
         @if($member->role!=NULL)
-            <x-container class="mt-10">
-                <div class="text-xl">
-
-                    <h1> {{$member->name}}</h1>
-                    <h2>{{$member->role}}</h2>
-                    <h2> {{$member->email}}</h2>
-
-                    <div class="size-40 mb-20">
+            <x-container class="mt-4 max-h-52">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+                    <div>
                         <img alt='justanimage' src="{{asset('storage/'.$member->image)}}"
-                             class="rounded w-auto max-h-9xl">
+                        class="rounded-full w-32 h-32">
                     </div>
-
-                    <h2>{{$member->techStack}}</h2>
-                    <h2>{{$member->number}}</h2>
-                    <h2>{{$member->dob}}</h2>
-
+                    <div>
+                        <h2 class="text-2xl truncate">{{$member->role}}</h2>
+                        <h2 class="text-2xl truncate">{{$member->techStack}} Developer</h2>
+                        <h2 class="text-lg truncate"> {{$member->email}}</h2>
+                        <h2>{{$member->number}}</h2>
+                    </div>
                 </div>
+                <h1 class="text-3xl truncate">{{$member->name}}</h1>
+
 
             </x-container>
 
