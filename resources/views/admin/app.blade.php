@@ -9,36 +9,53 @@
     <x-container class="my-10" style="max-width: 65%">
         <h1 class="text-3xl font-bold">Member Enrollment</h1>
 
-        <div class="grid border text-lg grid-cols-1 grid-cols-2 grid-cols-3 grid-cols-4 grid-cols-5 grid-cols-6 grid-cols-7 grid-cols-8 grid-cols-9 grid-cols-10 grid-cols-11">
+        <div class=" md:my-5 max-sm:overflow-x-auto">
+            <table class="table-auto w-[100%]">
+                <thead class="font-roboto text-slate-500 font-medium leading-normal">
+                <tr class="border rounded-md">
+                    <th class="border py-2 px-2 w-[10%]">Image</th>
+                    <th class="border py-2 px-2">ID</th>
+                    <th class="border py-2 px-2">Name</th>
+                    <th class="border py-2 px-2">Email</th>
+                    <th class="border py-2 px-2">Password</th>
+                    <th class="border py-2 px-2">Number</th>
+                    <th class="border py-2 px-2 w-[10%]">Tech Stack</th>
+                    <th class="border py-2 px-2 w-[10%]">Role</th>
+                    <th class="border py-2 px-2 w-[10%]">DOB</th>
+                    <th class="border py-2 px-2 w-[10%]">Created At</th>
+                    <th class="border py-2 px-2 w-[10%]">Edit</th>
+                    <th class="border py-2 px-2 w-[10%]">Delete</th>
 
-            <div>{{--For the image--}}
-                PICTURE
-            </div>
+                </tr>
+                </thead>
+                <tbody class="font-roboto text-slate-500 font-medium leading-normal">
 
-            <div>ID</div>
-
-            <div>NAME</div>
-
-            <div>EMAIL</div>
-
-            <div>PASSWORD</div>
-
-            <div>NUMBER</div>
-
-            <div>DOB</div>
-
-            <div>TECH STACK</div>
-
-            <div>ROLE</div>
-
-            <div>CREATED AT</div>
-
-            <div>EDIT</div>
-
-            {{--For Printing of the member data--}}
+                @foreach ($members as $member)
+                    <tr class="border rounded-md text-center">
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
+                        <td class="border py-4 px-2"></td>
 
 
 
+                        <td class="border py-4 text-center px-2">
+                                    {{--For Editing--}}
+                        </td>
+
+                        <td class="border py-4 text-center px-2">
+                                    {{--For Deleting--}}
+                        </td>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
         </div>
 
 
