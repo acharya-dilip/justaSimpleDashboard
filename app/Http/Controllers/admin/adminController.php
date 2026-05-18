@@ -67,7 +67,10 @@ class adminController extends Controller
             User::find($id)->delete();
         }
 
+        return redirect(route('admin.index'));
+
     }
+
 
 
 }
