@@ -12,7 +12,8 @@
 
     @foreach($members as $member)
             <x-container class="bg-gray-600 mt-4">
-                <form>
+                <form method="post" action="{{route('admin.update'),['id'=>$member->id]}}">
+                    @csrf
                 <table>
                     <tr>
                         <td>

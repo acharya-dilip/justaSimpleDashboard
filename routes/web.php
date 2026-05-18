@@ -50,7 +50,8 @@ Route::get("/meeting",function() {
 
 Route::get("/admin",[adminController::class,'index'
 ])->middleware(['auth', 'verified'])->name('admin.index');
-
+Route::post("/admin",[adminController::class,'update'
+])->middleware(['auth', 'verified'])->name('admin.update');
 
 
 Route::middleware('auth')->group(function () {
