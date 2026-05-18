@@ -84,6 +84,41 @@
                             </table>
 
                         </td>
+                        <td>
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <label for="id" class="ml-4">ID:</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48 " id="id" name="id"
+                                                      value="{{$member->id}}"></x-text-input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="techStack" class="ml-4">Stack:</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48" id="techStack" name="techStack"
+                                                      value="{{$member->techStack}}"></x-text-input>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="created_at" class="ml-4">Submission</label>
+                                    </td>
+                                    <td>
+                                        <x-text-input class="h-9 w-48" id="created_at" name="created_at"
+                                                      value="{{$member->created_at}}"></x-text-input>
+                                    </td>
+                                </tr>
+                            </table>
+
+
+                        </td>
+
                 </table>
                 </form>
              </x-container>
