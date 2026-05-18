@@ -58,7 +58,7 @@ class adminController extends Controller
 
     }
 
-    function delete(Request $request,$id){
+    function destroy($id){
 
         $member = member::findorfail($id);
         if($member){
