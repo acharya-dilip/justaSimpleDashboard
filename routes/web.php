@@ -45,17 +45,17 @@ Route::get("/members",[membersController::class,'index'
 Route::get("/meeting",function() {
     return view('meeting.app');
 })->middleware(['auth', 'verified'])->name('meeting');
-
-
+Route::get('/meeting/create',[postController::class,'create'
+])->middleware(['auth', 'role:admin'])->name('meeting.create');
 
 Route::get("/admin",[adminController::class,'index'
 ])->middleware(['auth', 'role:admin'])->name('admin.index');
 
 Route::post("/admin/update",[adminController::class,'update'
-])->middleware(['auth', 'verified'])->name('admin.update');
+])->middleware(['auth', 'role:admin'])->name('admin.update');
 
 Route::delete("/admin/delete/{id}",[adminController::class,'destroy'
-])->middleware(['auth', 'verified'])->name('admin.delete');
+])->middleware(['auth', 'role:admin'])->name('admin.delete');
 
 
 Route::middleware('auth')->group(function () {
