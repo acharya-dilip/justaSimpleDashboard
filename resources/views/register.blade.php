@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('registration.store') }}">
+    <form method="POST" action="{{ route('registration.store') }}" enctype="multipart/form-data">
         @csrf
 
         <!-- Name -->
@@ -62,7 +62,7 @@
 
         <div class="mt-4">
             <x-input-label for="image" :value="__('Your Formal Photo')" />
-            <input class="mt-2" type="file" accept="image/*" id="image" name="image">
+            <input class="mt-2" type="file" accept="image/*" id="image" name="image" required>
         </div>
 
         <div class="flex items-center justify-end mt-4">

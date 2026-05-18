@@ -22,7 +22,6 @@ class membersController extends Controller
             'dob' => 'required',
             'number' => 'required',
             'techStack' => 'required',
-            'image' => 'required',
         ]);
 
         $member = new member;
@@ -35,8 +34,9 @@ class membersController extends Controller
         $member->number = $validate['number'];
 
 
-
-        $member->image_path = $request->file('image')->store('uploads', 'public');
+        if ($request->hasFile('image')) {
+            $member->image = $request->file('image')->store('uploads', 'public');
+        }
 
         $member->save();
 

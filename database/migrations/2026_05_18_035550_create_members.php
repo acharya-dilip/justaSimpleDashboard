@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('password');
             $table->integer('number');
             $table->string('dob');
-            $table->string('tech stack');
+            $table->string('techStack');
             $table->string('role')->nullable();
 
             $table->timestamps();
