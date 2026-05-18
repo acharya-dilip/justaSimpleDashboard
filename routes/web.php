@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\dashboard\postController;
+use App\Http\Controllers\members\membersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,9 @@ Route::get('/registration', function () {
     return view('register');
 });
 
+Route::post('/registration',[membersController::class,'store'
+])->name('registration.store');
+
 Route::get('/dashboard', [postController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::prefix('dashboard')->group(function () {
 
@@ -29,7 +33,7 @@ Route::prefix('dashboard')->group(function () {
 });
 
 
-Route::get("/members",[\App\Http\Controllers\members\membersController::class,'index'
+Route::get("/members",[membersController::class,'index'
 ])->middleware(['auth', 'verified'])->name('members.index');
 
 Route::get("/meeting",function() {
