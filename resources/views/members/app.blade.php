@@ -6,12 +6,19 @@
     </x-slot>
 
 
-@foreach($users as $user)
-    <x-container>
-        <h1> {{$user->name}}</h1>
-        <h2>{{$user->role}}</h2>
-        <h2> {{$user->email}}</h2>
-    </x-container>
+@foreach($members as $member)
+    @if($member->role!=NULL)
+            <x-container class="mt-10">
+                <h1> {{$member->name}}</h1>
+                <h2>{{$member->role}}</h2>
+                <h2> {{$member->email}}</h2>
+                <img alt='justanimage' src="{{asset('storage/'.$member->image_path)}}"
+                     class="rounded w-auto max-h-9xl">
+                <h2>{{$member->techStack}}</h2>
+                <h2>{{$member->number}}</h2>
+                <h2>{{$member->dob}}</h2>
+            </x-container>
 
+        @endif
 @endforeach
 </x-app-layout>

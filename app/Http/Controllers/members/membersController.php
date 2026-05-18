@@ -43,9 +43,9 @@ class membersController extends Controller
 
     function index(){
 
-        $users = member::select('id','name','email','role')->oldest()->get();
+        $members = member::select('id','name','email','role','techStack','number','dob','image')->oldest()->get();
 
-        return view('members.app',compact('users'));
+        return view('members.app',compact('members'));
 
     }
 
