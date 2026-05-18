@@ -34,6 +34,7 @@ class User extends Authenticatable
     protected $table = 'users';
     protected $fillable = ['name', 'email', 'role','id'];
 
+    protected $primaryKey = ['id'];
     use HasFactory;
 
 }
