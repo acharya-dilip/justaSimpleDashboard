@@ -35,9 +35,9 @@ class adminController extends Controller
 
 
         if(User::find($id)==null){
-
             if($member->role != NULL ){
                 $user = new User();
+                $user->id=$request->id;
                 $user->name = $request->name;
                 $user->email = $request->email;
                 $user->role = $request->role;
@@ -53,6 +53,8 @@ class adminController extends Controller
             $user->password = $request->password;
             $user->save();
         }
+
+        return redirect(route('admin.index'));
 
     }
 
