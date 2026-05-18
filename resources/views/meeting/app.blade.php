@@ -5,13 +5,10 @@
         </h1>
         <form method="get" action="{{ route('meeting.create') }}">
             <x-primary-button>
-                <h2>Create Post</h2>
+                <h2>Create Meeting</h2>
             </x-primary-button>
         </form>
     </x-slot>
 
-<x-container>
-
-</x-container>
 
 </x-app-layout>

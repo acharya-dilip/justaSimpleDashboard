@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\admin\adminController;
 use App\Http\Controllers\dashboard\postController;
+use App\Http\Controllers\meeting\meetingController;
 use App\Http\Controllers\members\membersController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -46,8 +47,9 @@ Route::get("/meeting",function() {
     return view('meeting.app');
 })->middleware(['auth', 'verified'])->name('meeting');
 
-Route::get('/meeting/create',[meetingController::class,'create'
-])->middleware(['auth', 'role:admin'])->name('meeting.create');
+Route::get('/meeting/create',function(){
+        return view('meeting.create');
+})->middleware(['auth', 'role:admin'])->name('meeting.create');
 
 Route::get("/admin",[adminController::class,'index'
 ])->middleware(['auth', 'role:admin'])->name('admin.index');
