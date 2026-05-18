@@ -16,11 +16,25 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
+        <!-- Date of Birth -->
+        <div class="mt-4">
+            <x-input-label for="dob" :value="__('Date Of Birth (MM/DD/YYYY)')" />
+            <x-text-input id="dob" class="block mt-1 w-full"  name="dob" required/>
+        </div>
+
         <!-- Phone Number -->
         <div class="mt-4">
             <x-input-label for="number" :value="__('Phone Number')" />
             <x-text-input id="number" class="block mt-1 w-full"  name="number" required/>
         </div>
+
+        <!-- Tech Stack -->
+        <div class="mt-4">
+            <x-input-label for="techStack" :value="__('Tech Stack')" />
+            <x-text-input id="techStack" class="block mt-1 w-full"  name="techStack" required/>
+        </div>
+
+
 
         <!-- Password -->
         <div class="mt-4">
