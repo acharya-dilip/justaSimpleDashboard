@@ -33,12 +33,11 @@ class membersController extends Controller
         $member->techStack = $validate['techStack'];
         $member->number = $validate['number'];
 
-
-        if ($request->hasFile('image')) {
-            $member->image = $request->file('image')->store('uploads', 'public');
-        }
+        $member->image = $request->file('image')->store('uploads', 'public');
 
         $member->save();
+
+        return redirect(route('registration.index') );
 
     }
 

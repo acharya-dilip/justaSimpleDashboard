@@ -16,12 +16,17 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+
+
 Route::get('/registration', function () {
     return view('register');
 })->name('registration.index');
 
 Route::post('/registration',[membersController::class,'store'
 ])->name('registration.store');
+
+
+
 
 Route::get('/dashboard', [postController::class,'index'])->middleware(['auth', 'verified'])->name('dashboard');
 Route::prefix('dashboard')->group(function () {
