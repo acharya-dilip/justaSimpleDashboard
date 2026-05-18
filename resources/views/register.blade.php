@@ -22,6 +22,7 @@
             <x-text-input id="dob" class="block mt-1 w-full"  name="dob" required/>
         </div>
 
+
         <!-- Phone Number -->
         <div class="mt-4">
             <x-input-label for="number" :value="__('Phone Number')" />
@@ -57,6 +58,11 @@
                           name="password_confirmation" required autocomplete="new-password" />
 
             <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
+        </div>
+
+        <div class="mt-4">
+            <x-input-label for="image" :value="__('Your Formal Photo')" />
+            <input class="mt-2" type="file" accept="image/*" id="image" name="image">
         </div>
 
         <div class="flex items-center justify-end mt-4">
