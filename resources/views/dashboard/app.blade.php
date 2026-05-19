@@ -4,11 +4,13 @@
         {{ __('Dashboard') }}
 
     </h1>
+       @leader
     <form method="get" action="{{ route('dashboard.create') }}">
         <x-primary-button>
             <h2>Create Post</h2>
         </x-primary-button>
     </form>
+       @endleader
 
    </x-slot>
 
