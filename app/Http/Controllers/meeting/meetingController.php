@@ -26,8 +26,9 @@ class meetingController extends Controller
             $meeting->time = $validate['time'];
             $meeting->location = $validate['location'];
             $meeting->date = $validate['date'];
+            $meeting->latitude = $validate['latitude'];
+            $meeting->longitude = $validate['longitude'];
             $meeting->context = $validate['context'];
-            $meeting->locationLink = $validate['locationLink'];
 
             $meeting->save();
 
