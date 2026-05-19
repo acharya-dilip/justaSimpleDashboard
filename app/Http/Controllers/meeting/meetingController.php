@@ -16,8 +16,8 @@ class meetingController extends Controller
                 'location' => 'required',
                 'date' => 'required',
                 'context' => 'required',
-                'locationLink' => 'required',
-
+                'latitude' => 'required',
+                'longitude' => 'required',
             ]);
 
             $meeting = new meeting();
