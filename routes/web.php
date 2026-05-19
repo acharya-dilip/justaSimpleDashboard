@@ -8,9 +8,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/register',function(){
-    return view('auth.register');
-});
+//Route::get('/register',function(){
+//    return view('auth.register');
+//});
 
 
 
