@@ -43,9 +43,8 @@ Route::prefix('dashboard')->group(function () {
 Route::get("/members",[membersController::class,'index'
 ])->middleware(['auth', 'verified'])->name('members.index');
 
-Route::get("/meeting",function() {
-    return view('meeting.app');
-})->middleware(['auth', 'verified'])->name('meeting');
+Route::get("/meeting",[meetingController::class,'index'
+])->middleware(['auth', 'verified'])->name('meeting.index');
 
 Route::get('/meeting/create',function(){
         return view('meeting.create');
@@ -53,6 +52,11 @@ Route::get('/meeting/create',function(){
 
 Route::post('/meeting/create',[meetingController::class,'store'
 ])->middleware(['auth', 'role:Leader'])->name('meeting.store');
+
+
+
+
+
 
 Route::get("/admin",[adminController::class,'index'
 ])->middleware(['auth', 'role:Leader'])->name('admin.index');

@@ -8,6 +8,14 @@ use Illuminate\Http\Request;
 
 class meetingController extends Controller
 {
+
+
+        function index()
+        {
+
+
+                return view('meeting.app');
+        }
         function store(Request $request){
 
             $validate = $request->validate([
@@ -31,6 +39,8 @@ class meetingController extends Controller
             $meeting->context = $validate['context'];
 
             $meeting->save();
+
+            return redirect(route('meeting.index'));
 
         }
 }
