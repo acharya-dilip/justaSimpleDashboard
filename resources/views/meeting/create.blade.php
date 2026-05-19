@@ -58,10 +58,10 @@
                     {{ __('Longitude') }}
                 </div>
                 <div>
-                    <x-text-input id="latitude" name="latitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
+                    <x-text-input type="number" step="any" id="latitude" name="latitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
                 </div>
                 <div>
-                    <x-text-input id="longitude" name="longitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
+                    <x-text-input type="number" step="any" id="longitude" name="longitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
                 </div>
             </div>
 
