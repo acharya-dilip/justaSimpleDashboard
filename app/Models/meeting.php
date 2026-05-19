@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class meeting extends Model
 {
-    protected $primaryKey = ['id'];
+    protected $primaryKey = 'id';
     protected $fillable = ['agenda','time','date','context', 'location','locationLink'];
 
     use HasFactory;

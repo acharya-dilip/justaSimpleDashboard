@@ -45,15 +45,31 @@
             </h1>
             <x-text-input id="location" name="location" class="h-12 w-full mt-1 font-bold text-2xl " required></x-text-input>
 
+
+            <div class="grid grid-cols-1 sm:grid-cols-2">
+
+                <div>
+                    <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
+                        {{ __('Latitude') }}
+                    </h1>
+                </div>
+                <div>
+                    <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
+                    {{ __('Longitude') }}
+                </div>
+                <div>
+                    <x-text-input id="latitude" name="latitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
+                </div>
+                <div>
+                    <x-text-input id="longitude" name="longitude" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
+                </div>
+            </div>
+
             <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
                 {{ __('Context:') }}
             </h1>
-            <x-text-area class="w-full" name="context" required></x-text-area>
+            <x-text-area class="w-full h-36" name="context" required></x-text-area>
 
-            <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
-                {{ __('Location iframe Link:') }}
-            </h1>
-            <x-text-area class="w-full" name="locationLink" required></x-text-area>
 
             <div class=" flex justify-end">
                 <x-primary-button class="mt-4 h-10">

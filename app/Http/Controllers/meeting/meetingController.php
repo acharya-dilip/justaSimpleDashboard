@@ -10,7 +10,7 @@ class meetingController extends Controller
 {
         function store(Request $request){
 
-            $validate = request()->validate([
+            $validate = $request->validate([
                 'agenda' => 'required',
                 'time' => 'required',
                 'location' => 'required',
@@ -22,11 +22,12 @@ class meetingController extends Controller
 
             $meeting = new meeting();
 
-            $meeting->agenda = $request->agenda;
-            $meeting->time = $request->time;
-            $meeting->location = $request->location;
-            $meeting->context = $request->context;
-            $meeting->locationLink = $request->locationLink;
+            $meeting->agenda = $validate['agenda'];
+            $meeting->time = $validate['time'];
+            $meeting->location = $validate['location'];
+            $meeting->date = $validate['date'];
+            $meeting->context = $validate['context'];
+            $meeting->locationLink = $validate['locationLink'];
 
             $meeting->save();
 
