@@ -13,9 +13,14 @@ class meetingController extends Controller
         function index()
         {
 
+            $meetings = meeting::latest()->get;
 
-                return view('meeting.app');
+
+
+            return view('meeting.app', compact('meetings'));
         }
+
+
         function store(Request $request){
 
             $validate = $request->validate([
