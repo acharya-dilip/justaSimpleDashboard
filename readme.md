@@ -19,3 +19,12 @@ and an admin pannel for the leaders.
 - Start your apache and mysql server and create a database named "justaSimpleDatabase"
 
 Then Simply run it like you would run every laravel program.
+
+# Preview
+<img width="1920" height="1068" alt="image" src="https://github.com/user-attachments/assets/9a34b5e6-beae-4b2d-961c-0ceb2b5a0ad6" />
+
+
+
+
+https://github.com/user-attachments/assets/5292b150-848c-4dd3-b26e-a0287e2803f9
+
