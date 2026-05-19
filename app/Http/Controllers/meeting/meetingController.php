@@ -13,7 +13,7 @@ class meetingController extends Controller
         function index()
         {
 
-            $meetings = meeting::latest()->get;
+            $meetings = meeting::latest()->get();
 
 
 
