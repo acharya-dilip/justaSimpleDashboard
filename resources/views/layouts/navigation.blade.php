@@ -21,10 +21,11 @@
                     <x-nav-link :href="route('meeting.index')" :active:="request()->routeIs('meeting.index')">
                         Meeting
                     </x-nav-link>
+                    @leader
                     <x-nav-link :href="route('admin.index')" :active:="request()->routeIs('admin.index')" >
                         Admin Pannel
                     </x-nav-link>
-
+                    @endleader
                 </div>
             </div>
 
@@ -88,9 +89,11 @@
             <x-responsive-nav-link :href="route('meeting.index')" :active="request()->routeIs('meeting.index')">
                 Meeting
             </x-responsive-nav-link>
+            @leader
             <x-responsive-nav-link :href="route('admin.index')" :active="request()->routeIs('admin.index')">
                 Admin Panel
             </x-responsive-nav-link>
+            @endleader
         </div>
 
 

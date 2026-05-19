@@ -35,7 +35,7 @@ Route::prefix('dashboard')->group(function () {
 
     Route::get('/create',function(){
         return view('dashboard.create');
-    })->name('dashboard.create');
+    })->middleware(['auth','role:Leader'])->name('dashboard.create');
     Route::post('/create',[postController::class,'create'])->name('dashboard.create.post');
 });
 
