@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
 
             $table->string('agenda');
+            $table->string('date');
             $table->string('time');
             $table->string('location');
             $table->string('context');

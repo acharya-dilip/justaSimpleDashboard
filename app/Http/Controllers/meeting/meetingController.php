@@ -14,6 +14,7 @@ class meetingController extends Controller
                 'agenda' => 'required',
                 'time' => 'required',
                 'location' => 'required',
+                'date' => 'required',
                 'context' => 'required',
                 'locationLink' => 'required',
 

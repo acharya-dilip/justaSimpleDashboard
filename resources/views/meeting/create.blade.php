@@ -15,39 +15,45 @@
                 <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
                     {{ __('Meeting Agenda:') }}
                 </h1>
-            <x-text-input id="agenda" name="agenda" class="h-12 w-full mt-1 font-bold text-2xl mb-4"></x-text-input>
+            <x-text-input id="agenda" name="agenda" class="h-12 w-full mt-1 font-bold text-2xl mb-4" required></x-text-input>
 
 
             <div class="grid grid-cols-1 sm:grid-cols-2">
 
                 <div>
                     <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
-                    {{ __('Time:') }}
+                    {{ __('Date:') }}
                     </h1>
                 </div>
                 <div>
                     <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight">
-                    {{ __('Location:') }}
+                    {{ __('Time:') }}
                     </h1>
                 </div>
                 <div>
-                    <x-text-input id="time" name="time" class="h-12 mt-1 font-bold text-2xl" style="width:98%;"></x-text-input>
+                    <x-text-input id="date" name="date" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
                 </div>
                 <div>
-                    <x-text-input id="location" name="location" class="h-12 mt-1 font-bold text-2xl" style="width:100%;"></x-text-input>
+                    <x-text-input id="time" name="time" class="h-12 mt-1 font-bold text-2xl" style="width:98%;" required></x-text-input>
                 </div>
 
             </div>
 
+
+            <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
+                {{ __('Location:') }}
+            </h1>
+            <x-text-input id="location" name="location" class="h-12 w-full mt-1 font-bold text-2xl " required></x-text-input>
+
             <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
                 {{ __('Context:') }}
             </h1>
-            <x-text-area class="w-full" name="context"></x-text-area>
+            <x-text-area class="w-full" name="context" required></x-text-area>
 
             <h1 class="font-semibold text-4xl text-gray-800 dark:text-gray-200 leading-tight mt-4">
                 {{ __('Location iframe Link:') }}
             </h1>
-            <x-text-area class="w-full" name="locationLink"></x-text-area>
+            <x-text-area class="w-full" name="locationLink" required></x-text-area>
 
             <div class=" flex justify-end">
                 <x-primary-button class="mt-4 h-10">
