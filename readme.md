@@ -5,6 +5,12 @@ to a dashboard where you can view all of the progress made by the club
 in the form of Posts and also you can view the members of the club and their details in the members section
 and an admin pannel for the leaders.
 
+# Points to note
+- This is my first actual laravel and php project
+- I used AI for debugging and learning stuff about laravel & php
+- No vibe coding was done over here
+- AI was explicitly used when encountering errors or roadblocks
+
 # Features
 - Dashboard Posting for Leaders
 - Dashboard Post viewing for members
