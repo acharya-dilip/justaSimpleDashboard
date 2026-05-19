@@ -19,6 +19,12 @@ and an admin pannel for the leaders.
 - Members details everyone
 - Admin Pannel for leaders to modify the details of the members
 
+  # Extra Stuff
+- For registration of new members there's a a form at /registration
+- After they registrate you have to assign them  a role from the admin pannel only then will they be visible in the members section
+- Dashboard posting perms and the meeting posting perms along with the admin pannel perms are only available if you've got role 'Leader' in the users table in the database
+- Note this project is meant for you to clone and modify according to your club and is a template for you to edit and  build on
+
 # Run Locally
 - Clone the project
 - Rename the example.env file to .env
