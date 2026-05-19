@@ -17,13 +17,13 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
 
                     <div>
-                        <h1 class="font-semibold text-5xl text-gray-800 dark:text-gray-200 leading-tight">
+                        <h1 class="font-semibold text-5xl ml-2 text-gray-800 dark:text-gray-200 leading-tight">
                             {{$meeting->agenda}} </h1>
 
                             <h1 class=" bg-gray-800 font-semibold text-3xl p-4 text-gray-800 dark:text-gray-200 leading-tight mt-2">
                                 {{$meeting->date}} at {{$meeting->time}} </h1>
 
-                        <h1 class="font-semibold text-2xl text-gray-800 mt-3 dark:text-gray-200 leading-tight">
+                        <h1 class="font-semibold ml-3 text-2xl text-gray-800 mt-3 dark:text-gray-200 leading-tight">
                             {{$meeting->context}} </h1>
 
 
