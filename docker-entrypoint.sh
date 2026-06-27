@@ -22,3 +22,5 @@ php artisan route:cache 2>/dev/null || true
 php artisan view:cache 2>/dev/null || true
 
 exec "$@"
+
+# helo
