@@ -5,7 +5,11 @@ if [ ! -f .env ]; then
     touch .env
 fi
 
-if [ -z "$APP_KEY" ] || [ "$APP_KEY" = "some-random-key" ]; then
+if [ -n "$APP_KEY" ]; then
+    if ! grep -q "^APP_KEY=" .env; then
+        echo "APP_KEY=$APP_KEY" >> .env
+    fi
+elif ! grep -q "^APP_KEY=" .env; then
     php artisan key:generate --force
 fi
 
