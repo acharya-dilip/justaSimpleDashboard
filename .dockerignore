@@ -1,0 +1,15 @@
+.git
+.gitattributes
+.gitignore
+.env
+.idea
+.editorconfig
+.npmrc
+node_modules
+vendor
+storage/logs/*
+storage/framework/cache/data/*
+storage/framework/sessions/*
+storage/framework/views/*
+public/build
+Demo Video.mp4
