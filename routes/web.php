@@ -64,7 +64,7 @@ Route::get("/admin",[adminController::class,'index'
 Route::post("/admin/update",[adminController::class,'update'
 ])->middleware(['auth', 'role:Leader'])->name('admin.update');
 
-Route::delete("/admin/delete/{id}",[adminController::class,'destroy'
+Route::post("/admin/delete/{id}",[adminController::class,'destroy'
 ])->middleware(['auth', 'role:Leader'])->name('admin.delete');
 
 

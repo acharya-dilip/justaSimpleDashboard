@@ -15,7 +15,7 @@
 
                 <form class="flex justify-end" method="POST" action="{{route('admin.delete',$member->id)}}">
                     @csrf
-                    @method('DELETE')
+{{--                    @method('DELETE')--}}
                     <input type="submit" value="❌️">
                 </form>
 

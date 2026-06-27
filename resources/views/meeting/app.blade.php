@@ -28,9 +28,6 @@
                         <h1 class="font-semibold ml-3 text-2xl text-gray-800 mt-3 dark:text-gray-200 leading-tight">
                             {{$meeting->context}} </h1>
 
-
-
-
                     </div>
                     <div>
                         <div class="embed-map-fixed">
