@@ -1,4 +1,4 @@
-FROM php:8.3-apache
+FROM php:8.4-apache
 
 RUN apt-get update && apt-get install -y \
     git \
@@ -32,7 +32,11 @@ WORKDIR /var/www/html
 
 COPY . .
 
+RUN echo "APP_KEY=$(php -r 'echo base64_encode(random_bytes(32));')" > .env
+
 RUN composer install --no-dev --optimize-autoloader
+
+RUN rm -f .env
 
 RUN npm install && npm run build
 
